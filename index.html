@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Login_style.css">
+    <link rel="stylesheet" type="text/css" href="Login_cardB.css">
+    <link rel="stylesheet" type="text/css" href="icon/style.css">
+
+    <title>Login</title>
+</head>
+
+<body>
+    <!--
+        " lg " for screen in desktop mode 
+        " mb " for screen in mobile mode    
+    -->
+    <main class="hide">
+        <div class="lg-form-container" id="lgForm">
+
+            <div class="lg-title position-L ">Login</div>
+            <div class="lg-title position-S godown">SignUp</div>
+
+            <div class="lg-form-card-A"> 
+                <!--  LogIn Form START:  -->
+                <form action="">
+                    <div class="lg-form-input"> <!-- UserName input -->
+                        <input id="username-L" name="username" type="text" required>
+                        <label for="username-L">UserName</label>
+                        <i class="icon icon-user-tie"></i>
+                    </div>
+
+                    <div class="lg-form-input"> <!-- Password input -->
+                        <input id="password-L" name="password" type="password" required>
+                        <label for="password-L">Password</label>
+                        <i class="icon icon-key-fill"></i>
+                        <span class="icon icon-eye" onclick="showPassword(this)"></span>
+                    </div>
+
+                    <div class="lg-form-checkbox"> <!-- Remember user's information for next login -->
+                        <input id="rememberme" type="checkbox" name="rememberme">
+                        <label for="rememberme">Remember me</label>
+                    </div>
+
+                    <div class="lg-form-buttons">  <!-- Submit button &  Password reset button -->
+
+                        <button id="submit-L" type="submit">
+                            LOGIN
+                        </button>
+
+                        <div id="lgFoegot" class="lg-forgotPass">
+                            <a href="">
+                                Forgot Password?
+                            </a>
+                        </div>
+                    </div>
+
+                    <hr class="line-1">
+
+                    <div class="lg-form-social">    <!-- User can LogIn with his other accounts -->
+                        <span> Or login with : </span>
+                    </div>
+                    <div class="lg-form-social">
+                        <a href="">
+                            <img src="icon/google.svg" alt="">
+                        </a>
+                        <a href="">
+                            <img src="icon/github.svg" alt="">
+                        </a>
+                        <a href="">
+                            <img src="icon/linkedin.svg" alt="">
+                        </a>
+                        <a href="">
+                            <img src="icon/facebook.svg" alt="">
+                        </a>
+                    </div>
+                </form>
+                <!--  LogIn Form END  -->
+
+                <!--  SignUp Form START:  -->
+                <form action="">
+                    <div class="lg-form-input"> <!-- Name of User input -->
+                        <input id="name-S" name="name" type="text" dir="auto" required>
+                        <label for="name-S">Name</label>
+                        <i class="icon icon-user-tie"></i>
+                    </div>
+                    <div class="lg-form-input">  <!-- User's Email address input -->
+                        <input id="email-S" name="email" type="text" required>
+                        <label for="email-S">Email</label>
+                        <i class="icon icon-envelope-at-fill"></i>
+                    </div>
+
+                    <div class="lg-form-input">  <!-- User's password input -->
+                        <input id="password-S" name="password" type="password" required>
+                        <label for="password-S">Password</label>
+                        <i class="icon icon-key-fill"></i>
+                        <span class="icon icon-eye" onclick="showPassword(this)"></span>
+                    </div>
+
+                    <div class="lg-form-checkbox color-1">  <!-- User Aggre with Terms -->
+                        <input id="lgFormAggre" name="FormAggre" type="checkbox" checked>
+                        <label for="lgFormAggre"> I've read and aggre to
+                            <a href="#"> Terms & Conditions </a>
+                        </label>
+                    </div>
+
+                    <div class="lg-form-buttons">   <!-- Submit an save user's information button -->
+                        <button id="submit-S"  type="submit">
+                            Signup
+                        </button>
+                    </div>
+                </form>
+                <!--  SignUp Form END  -->
+            </div>
+
+            <div class="lg-form-card-B" id="formSwitcher">
+                <!--  Card B Container in Login mode START:  -->
+                <div class="lg-fcb-container d-flex ">
+                    <div class="lg-fcb-item">
+                        <header>Hello Friend!</header>
+                        <p>
+                            Enter your Personal details
+                            and start a journey with us
+                        </p>
+                    </div>
+
+                    <div class="lg-fcb-item">
+                        <button onclick="switchCard('signup')">
+                            Sign up
+                        </button>
+                    </div>
+
+                </div>
+                <!--  Card B Container in LogIn mode END  -->
+
+                <!--  Card B Container in SignUp mode START:  -->
+                <div class="lg-fcb-container d-none">
+                    <div class="lg-fcb-item">
+                        <header>Wellcome Back!</header>
+                        <p>
+                            To keep connected with us please
+                            login with our personal info.
+                        </p>
+
+                    </div>
+
+                    <div class="lg-fcb-item">
+                        <button onclick="switchCard('login')">
+                            Sign in
+                        </button>
+                    </div>
+
+                    <hr class="line-2">
+
+                    <div class="lg-fcb-footer">
+                        <div>
+                            or sign in with:
+                        </div>
+                        <div class="lg-fcb-accounts">
+                            <a href="">
+                                <img src="icon/google-plus.svg" alt="">
+                            </a>
+                            <a href="">
+                                <img src="icon/github.svg" alt="">
+                            </a>
+                            <a href="">
+                                <img src="icon/linkedin.svg" alt="">
+                            </a>
+                            <a href="">
+                                <img src="icon/facebook.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <!--  Card B Container in SignUp mode END  -->
+            </div>
+        </div>
+    </main>
+
+    <main class="mobile">
+        <h1>
+            <i class="icon icon-emoji-wink"></i>
+            Comeing soon ...
+        </h1>
+    </main>
+    <script src="Login_JS.js"></script>
+</body>
+
+</html>
