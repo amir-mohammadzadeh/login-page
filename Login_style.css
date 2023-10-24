@@ -20,7 +20,14 @@
     .hide{
         display: none;
     }
-    .mobile{ display: block; margin: 20px 30px;}
+    .mobile{ 
+        width: calc(100% - 40px);
+        display: block; 
+        margin: 20px 20px;
+    }
+    body{
+        font-size: 20px;
+    }
 }
 
 body{
